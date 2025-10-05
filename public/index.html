@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אתר העלאות שלי</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ברוכים הבאים לאתר ההעלאות!</h1>
+    </header>
+    
+    <main>
+        <!-- טאבים -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'images')">תמונות</button>
+            <button class="tab-button" onclick="openTab(event, 'videos')">סרטונים</button>
+            <button class="tab-button" onclick="openTab(event, 'songs')">שירים</button>
+        </div>
+        
+        <!-- חלונית תמונות -->
+        <div id="images" class="tab-content active">
+            <h2>העלאת תמונות</h2>
+            <input type="file" id="imageUpload" accept="image/*" multiple>
+            <div id="imagePreview" class="preview"></div>
+        </div>
+        
+        <!-- חלונית סרטונים -->
+        <div id="videos" class="tab-content">
+            <h2>העלאת סרטונים</h2>
+            <input type="file" id="videoUpload" accept="video/*" multiple>
+            <div id="videoPreview" class="preview"></div>
+        </div>
+        
+        <!-- חלונית שירים -->
+        <div id="songs" class="tab-content">
+            <h2>העלאת שירים</h2>
+            <input type="file" id="songUpload" accept="audio/*" multiple>
+            <div id="songPreview" class="preview"></div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025, האתר שלך.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
